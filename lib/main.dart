@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grad_projct/login_page.dart';
-import 'package:grad_projct/splash_screen.dart';
+import 'package:grad_projct/pagess/login_page.dart';
+import 'package:grad_projct/pagess/splash_screen.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:grad_projct/login_page.dart';
+import 'package:grad_projct/pagess/login_page.dart';
 
 class Splash_Screen extends StatefulWidget {
   const Splash_Screen({super.key});
@@ -17,7 +17,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const Login_page(),
+          builder: (_) => const login(),
         ),
       );
     });
