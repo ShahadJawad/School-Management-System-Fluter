@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:grad_projct/pagess/login_page.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class Splash_Screen extends StatefulWidget {
   const Splash_Screen({super.key,});
@@ -39,19 +40,28 @@ class _Splash_ScreenState extends State<Splash_Screen> {
               SizedBox(
                 height: MediaQuery.of(context).size.width / 1,
               ),
-              const Text(
-                'مدرستي',
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.white,
+                Center(
+                child: DefaultTextStyle(
+                  style: TextStyle(fontSize: 30.0),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      TyperAnimatedText(
+                        'مدرستي',
+                        textStyle: TextStyle(fontFamily: 'Cairo'),
+
+                        speed: Duration(milliseconds: 150),
+                      ),
+                    ],
+                    isRepeatingAnimation: false,
+                    repeatForever: false,
+                    displayFullTextOnTap: false,
+                  ),
                 ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.width / 2,
               ),
-              const CircularProgressIndicator(
-                backgroundColor: Colors.white,
-              )
+
             ],
           ),
         ));
