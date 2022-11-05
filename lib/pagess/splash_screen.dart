@@ -19,7 +19,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   }
 
   startSplashScreenTimer() async {
-    var _duration = new Duration(seconds: 5);
+    var _duration = new Duration(seconds: 2);
     return new Timer(_duration, navigationToNextPage);
   }
 
