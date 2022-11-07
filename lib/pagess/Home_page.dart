@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grad_projct/constant.dart';
 import 'package:grad_projct/lists/colorList.dart';
+import 'package:grad_projct/widgets/homeDrawer.dart';
 
 
 class Home extends StatefulWidget {
@@ -32,7 +33,9 @@ class _HomeState extends State<Home> {
          backgroundColor: Colors.white10,
          elevation: 0,
       ),
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: HomeDrawer(),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
           child:Column(
