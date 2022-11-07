@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grad_projct/lists/colorList.dart';
 import 'package:grad_projct/constant.dart';
+import 'package:grad_projct/widgets/myListTile.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({super.key});
@@ -15,7 +15,7 @@ class HomeDrawer extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 30,
-                backgroundColor: KColor,
+               backgroundImage: AssetImage('assets/images/person.jpg'),
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width / 25,
@@ -43,74 +43,43 @@ class HomeDrawer extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height / 15,
         ),
-        ListTile(
-          onTap: () {},
-          leading: const Icon(
-            Icons.home,
-            size: 30,
-          ),
-          title: Text('الصفحة الرئيسية'),
-        ),
+        MyListTile(myText: 'الصفحة الرئيسية', myIcon:  const Icon(Icons.home,size: 30,), onPressed: (){}),
+
         Container(
           width: double.infinity,
           height: 1,
-          color: Color.fromARGB(255, 158, 158, 158),
+          color:const Color.fromARGB(255, 158, 158, 158),
         ),
-        ListTile(
-          onTap: () {},
-          leading: const Icon(
-            Icons.table_rows_sharp,
-            size: 30,
-          ),
-          title: Text('الجدول اليومي وجدول الامتحانات'),
-        ),
+        MyListTile(myText: 'الجدول اليومي وجدول الامتحانات', myIcon: const Icon(Icons.table_rows_sharp,size: 30,), onPressed: () {}),
+
         Container(
           width: double.infinity,
           height: 1,
-          color: Color.fromARGB(255, 158, 158, 158),
+          color:const Color.fromARGB(255, 158, 158, 158),
         ),
-        ListTile(
-          onTap: () {},
-          leading: const Icon(
-            Icons.menu_book_sharp,
-            size: 30,
-          ),
-          title: Text('الكتب والمصادر'),
-        ),
+        MyListTile(myText: 'الكتب والمصادر', myIcon: const Icon(Icons.menu_book_sharp, size: 30,), onPressed: () {}),
+
         Container(
           width: double.infinity,
           height: 1,
-          color: Color.fromARGB(255, 158, 158, 158),
+          color:const Color.fromARGB(255, 158, 158, 158),
         ),
-        ListTile(
-          onTap: () {},
-          leading: const Icon(
-            Icons.class_,
-            size: 30,
-          ),
-          title: Text('الصفوف'),
+        MyListTile(myText: 'الصفوف', myIcon:const Icon(Icons.class_,size: 30,), onPressed: (){}),
+
+        Container(
+          width: double.infinity, height: 1,
+          color:const Color.fromARGB(255, 158, 158, 158),
         ),
+
+        MyListTile(myText: 'مهامي', myIcon: const Icon(Icons.done, size: 30,), onPressed: (){}),
+
         Container(
           width: double.infinity,
           height: 1,
-          color: Color.fromARGB(255, 158, 158, 158),
+          color:const Color.fromARGB(255, 158, 158, 158),
         ),
-        ListTile(
-          onTap: () {},
-          leading: const Icon(
-            Icons.done,
-            size: 30,
-          ),
-          title: Text('مهامي'),
-        ),
-        Container(
-          width: double.infinity,
-          height: 1,
-          color: Color.fromARGB(255, 158, 158, 158),
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height / 2.6,
-        ),
+
+        const Spacer(),
         Container(
           alignment: Alignment.topRight,
           child: IconButton(

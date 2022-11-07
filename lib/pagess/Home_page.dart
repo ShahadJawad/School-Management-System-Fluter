@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
         actions:  [
           Container(
           margin:const EdgeInsets.symmetric(horizontal: 10),
-            child: CircleAvatar(backgroundColor: KColor,radius: 18,))],
+            child:const CircleAvatar(backgroundImage: AssetImage('assets/images/person.jpg'),radius: 18,))],
 
        //drawer
         leading: Builder(
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
          elevation: 0,
       ),
       drawer: const Drawer(
-        child: HomeDrawer(),
+       child: HomeDrawer(),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
@@ -76,18 +76,54 @@ class _HomeState extends State<Home> {
 
               Flexible(
                 child: ListView.builder(
-                    itemCount:5 ,
+                    itemCount:6 ,
                     shrinkWrap: true,
-                    itemBuilder: (context, index) => Container(
-                      height: 80,
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: colorList[index].myColors),
-                        child: InkWell(
+                    itemBuilder: (context, index) =>
+                        InkWell(
                           onTap: (){},
+                      child: Container(
+                        padding: EdgeInsets.only(top: 6,right: 8,left: 6),
+                        height: 80,
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: colorList[index].myColors),
+                          child:Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                            const  Text('قام abdula kareem بنشر مهمة دراسية جديدة',
+                                  style: TextStyle(
+                                    fontFamily: 'Tajawal',
+                                    fontSize: 16,
+                                  )),
 
-                        )
+                              //main
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+
+                                  //for image and name
+                                  Row(
+                                    children:const [
+                                      CircleAvatar(backgroundImage: AssetImage('assets/images/person2.jpg'),
+                                        radius: 15,
+                                      ),
+                                      SizedBox(width:5),
+                                      Text('abdula kareem',style: TextStyle(color: Colors.black45,fontSize: 15),)],),
+
+                                  //for time
+                                  Row(
+                                    children:const [
+                                    Text('03:00pm',style: TextStyle(color: Colors.black45,fontSize: 15),),
+                                    Icon(Icons.timer_sharp,color: Colors.black45,)
+                                  ],)
+
+                                ],
+                              )
+                            ],
+                          ) ,
+                      ),
                     )
 
                 ),
