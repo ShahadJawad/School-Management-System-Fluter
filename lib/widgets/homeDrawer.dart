@@ -13,7 +13,7 @@ class HomeDrawer extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(10, 60, 20, 0),
           child: Row(
             children: [
-              CircleAvatar(
+             const CircleAvatar(
                 radius: 30,
                backgroundImage: AssetImage('assets/images/person.jpg'),
               ),

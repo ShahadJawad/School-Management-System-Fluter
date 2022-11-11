@@ -52,15 +52,30 @@ class _HomeState extends State<Home> {
                 ],),
 
               //جدول
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 50,horizontal: 10),
-                height: 130,
-                width: MediaQuery.of(context).size.width,
-                decoration:BoxDecoration(
-                  color: Colors.brown[100],
-                  borderRadius: BorderRadius.circular(10)
-                ) ,
-              ),
+               Container(
+                  margin: EdgeInsets.symmetric(vertical: 50,horizontal: 10),
+                  height: 130,
+                  width: MediaQuery.of(context).size.width,
+                  decoration:BoxDecoration(
+                    color: Colors.brown[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ) ,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                       const Center(
+                          child: Text('ما هو جدول الغد؟',style: TextStyle(fontSize: 25,fontFamily: 'Cairo')),
+                        ),
+                         Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [Text('عرض جدول ايام الاسبوع كامل')],
+                          ),
+
+                      ],
+                  ),
+                ),
+
               
               //text تبليغات
               Container(
@@ -110,13 +125,13 @@ class _HomeState extends State<Home> {
                                         radius: 15,
                                       ),
                                       SizedBox(width:5),
-                                      Text('abdula kareem',style: TextStyle(color: Colors.black45,fontSize: 15),)],),
+                                      Text('abdula kareem',style: TextStyle (color: Colors.black45,fontSize: 13),)],),
 
                                   //for time
                                   Row(
                                     children:const [
-                                    Text('03:00pm',style: TextStyle(color: Colors.black45,fontSize: 15),),
-                                    Icon(Icons.timer_sharp,color: Colors.black45,)
+                                    Text('03:00pm',style: TextStyle(color: Colors.black45,fontSize: 13),),
+                                    Icon(Icons.timer_sharp,color: Colors.black45,size: 20,)
                                   ],)
 
                                 ],
