@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grad_projct/constant.dart';
 
 class colors {
+
   colors({required this.myColors});
   Color myColors;
 }
