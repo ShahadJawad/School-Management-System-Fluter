@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grad_projct/constant.dart';
+import 'package:grad_projct/pagess/classas_page.dart';
 import 'package:grad_projct/widgets/myListTile.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -64,7 +65,11 @@ class HomeDrawer extends StatelessWidget {
           height: 1,
           color:const Color.fromARGB(255, 158, 158, 158),
         ),
-        MyListTile(myText: 'الصفوف', myIcon:const Icon(Icons.class_,size: 30,), onPressed: (){}),
+
+        MyListTile(myText: 'الصفوف',
+            myIcon:const Icon(Icons.class_,size: 30,), onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>classas_page()));
+            }),
 
         Container(
           width: double.infinity, height: 1,

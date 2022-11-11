@@ -14,12 +14,19 @@ class _Notifications_pageState extends State<Notifications_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          //backgroundColor: Colors.white10,
-          ),
+        backgroundColor: Colors.white10,
+        elevation: 0,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.pop(context);
+          },
+            icon: Icon(Icons.arrow_forward,color: Colors.black,)),
+        ],
+
+      ),
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(vertical: 30),
             margin: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,7 +36,7 @@ class _Notifications_pageState extends State<Notifications_page> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
-                      fontFamily: 'Tajawal'),
+                      fontFamily: 'Vazirmatn'),
                 ),
                 IconButton(
                   onPressed: () {
@@ -52,9 +59,9 @@ class _Notifications_pageState extends State<Notifications_page> {
                 itemBuilder: (context, index) => InkWell(
                       onTap: () {},
                       child: Container(
-                        padding: EdgeInsets.only(top: 6, right: 8, left: 6),
+                        padding: const EdgeInsets.only(top: 6, right: 8, left: 6),
                         height: 80,
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                             color: colorList[index].myColors),
