@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:grad_projct/lists/colorList.dart';
+
+import '../constant.dart';
 class classas_page extends StatelessWidget {
   const classas_page({Key? key}) : super(key: key);
 
@@ -9,7 +10,7 @@ class classas_page extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding:const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
               //text الصفوف
@@ -28,24 +29,38 @@ class classas_page extends StatelessWidget {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
-                      Container(
-                        height: 35,
-                        width: 260,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border:Border.all(color: Colors.grey),
+                  Container(
+            alignment: Alignment.center,
+            height: 40,
+            width: 300,
+            padding: EdgeInsets.symmetric(horizontal:10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+             borderRadius:BorderRadius.circular(20),
 
-                            borderRadius: BorderRadius.circular(30)
-                        ),
+            ),
+            child: TextField(
+              maxLines: 1,
+              decoration: InputDecoration(
+                fillColor: Colors.transparent,
+                filled: true,
+                hintStyle: TextStyle(
+                    color: Colors.black.withOpacity(.4),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 22),
+                prefixIcon:
+                Icon(Icons.search, color: Colors.black.withOpacity(.6)),
+                hintText: 'بحث',
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25),
+                    borderSide: BorderSide(color: KColor)
+                    //borderSide: BorderSide.none
+                ),
+                contentPadding: EdgeInsets.zero,
+              ),
+            ),
+          ),
 
-                          child: const TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-
-                              prefixIcon: Icon(Icons.search_outlined),
-                            ),
-                          ),
-                      ),
 
                          Text('اضافه صف',
                         style: TextStyle(
@@ -54,7 +69,7 @@ class classas_page extends StatelessWidget {
                             fontFamily: 'Vazirmatn'),),
                     ] ),
               ),
-              SizedBox(height: 30),
+             const SizedBox(height: 30),
               //cart
               Flexible(
               child:ListView.builder(
@@ -64,29 +79,129 @@ class classas_page extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          padding: EdgeInsets.symmetric(horizontal: 1),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                             children: [
                               Container(
-                              height: 160,width: 160,
+                              height: 160,width: 180,
                               decoration: BoxDecoration(
                                   borderRadius:BorderRadius.circular(15),
-                                  color: colorList[index].myColors
+                                  color: colorList[index].myColors,
+
                               ),
+                                child:   Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 10),
+                                    child:const Text('الرياضيات',
+                                      style: TextStyle(fontSize: 18,fontFamily: 'Vazirmatn',fontWeight: FontWeight.bold), )),
+                                const Text('  الصف الاول متوسط ',
+                                    style: TextStyle(fontSize: 14,fontFamily: 'Vazirmatn',fontWeight: FontWeight.w500)
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: 60),
+                                  width: double.infinity, height: 1,
+                                  color:Colors.black,
+                                ),
+                                Container(
+                                  margin: EdgeInsets.symmetric(vertical: 5),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children:  [
+                                      Row(
+                                        children:const [
+                                          CircleAvatar(
+                                            backgroundImage: AssetImage(
+                                                'assets/images/person2.jpg'),
+                                            radius: 15,
+                                          ),
+                                          SizedBox(width: 5),
+                                          Text(
+                                            'abdula kareem',
+                                            style: TextStyle(
+                                                color: Colors.black,fontWeight: FontWeight.w500,
+                                                fontSize: 13),
+                                          ),
+                                        ],
+                                      ),
+
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children:const [
+                                          Icon(Icons.file_copy_outlined, size: 16,color: Colors.white38),
+                                          Icon(Icons.delete_outline_outlined,size: 16,color: Colors.white38)
+                                        ],
+                                      )
+
+                                    ],
+                                  ),
+                                ),
+                              ])
                               ),
                               Container(
-                                height: 160,width: 160,
+                                padding: EdgeInsets.only(top: 8),
+                                height: 160,width: 180,
                                 decoration: BoxDecoration(
                                     borderRadius:BorderRadius.circular(15),
                                     color: colorList2[index].myColors
                                 ),
+                                  child:  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                          padding: EdgeInsets.symmetric(horizontal: 10),
+                                          child:const Text('الرياضيات',
+                                            style: TextStyle(fontSize: 18,fontFamily: 'Vazirmatn',fontWeight: FontWeight.bold), )),
+                                     const Text('  الصف الاول متوسط ',
+                                          style: TextStyle(fontSize: 14,fontFamily: 'Vazirmatn',fontWeight: FontWeight.w500)
+                                      ),
+                                      Container(
+                                      margin: EdgeInsets.only(top: 60),
+                                      width: double.infinity, height: 1,
+                                      color:Colors.black,
+                                    ),
+                                      Container(
+                                        margin: EdgeInsets.symmetric(vertical: 5),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                          children:  [
+                                            Row(
+                                              children:const [
+                                                 CircleAvatar(
+                                                  backgroundImage: AssetImage(
+                                                      'assets/images/person2.jpg'),
+                                                  radius: 15,
+                                                ),
+                                                  SizedBox(width: 5),
+                                                  Text(
+                                                  'abdula kareem',
+                                                  style: TextStyle(
+                                                      color: Colors.black,fontWeight: FontWeight.w500,
+                                                      fontSize: 13),
+                                                ),
+                                              ],
+                                            ),
+
+                                            Row(
+                                              crossAxisAlignment: CrossAxisAlignment.end,
+                                              children:const [
+                                                Icon(Icons.file_copy_outlined, size: 16,color: Colors.white38),
+                                                Icon(Icons.delete_outline_outlined,size: 16,color: Colors.white38)
+                                              ],
+                                            )
+
+                                          ],
+                                        ),
+                                      ),
+                                  ])
                               ),
                             ],
                           ),
                         ),
-                        SizedBox(height: 50)
+                      const  SizedBox(height: 40)
                       ],
                     );
                   },
