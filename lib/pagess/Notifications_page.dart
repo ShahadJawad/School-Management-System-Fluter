@@ -64,7 +64,8 @@ class _Notifications_pageState extends State<Notifications_page> {
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            color: colorList[index].myColors),
+                           // color: colorList[index].myColors
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,

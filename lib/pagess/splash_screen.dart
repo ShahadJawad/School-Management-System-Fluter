@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:grad_projct/constant.dart';
 import 'package:grad_projct/pagess/login_page.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -33,7 +34,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 179, 163, 238),
+        backgroundColor:KColor,
         body: Center(
           child: Column(
             children: [

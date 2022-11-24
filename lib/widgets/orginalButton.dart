@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grad_projct/constant.dart';
 
 
 class orginalButton extends StatelessWidget {
@@ -10,7 +11,7 @@ class orginalButton extends StatelessWidget {
     return  ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor:Color.fromARGB(255, 197, 163, 238),
+        backgroundColor:KColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(9),
         ),

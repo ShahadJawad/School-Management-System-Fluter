@@ -88,7 +88,7 @@ class classas_page extends StatelessWidget {
                               height: 160,width: 180,
                               decoration: BoxDecoration(
                                   borderRadius:BorderRadius.circular(15),
-                                  color: colorList[index].myColors,
+                                  //color: colorList[index].myColors,
 
                               ),
                                 child:   Column(
@@ -146,7 +146,7 @@ class classas_page extends StatelessWidget {
                                 height: 160,width: 180,
                                 decoration: BoxDecoration(
                                     borderRadius:BorderRadius.circular(15),
-                                    color: colorList2[index].myColors
+                                  //  color: colorList2[index].myColors
                                 ),
                                   child:  Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
