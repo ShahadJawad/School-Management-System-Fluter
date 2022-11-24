@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grad_projct/lists/colorList.dart';
 
-import '../constant.dart';
+import '../../constant.dart';
 class classas_page extends StatelessWidget {
   const classas_page({Key? key}) : super(key: key);
 

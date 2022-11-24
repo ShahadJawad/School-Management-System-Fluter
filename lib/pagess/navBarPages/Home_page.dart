@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grad_projct/constant.dart';
-import 'package:grad_projct/lists/colorList.dart';
 import 'package:grad_projct/pagess/Notifications_page.dart';
 import 'package:grad_projct/widgets/homeDrawer.dart';
 import 'package:grad_projct/widgets/tableWidget.dart';
@@ -43,7 +42,7 @@ class _HomeState extends State<Home> {
               ) ,
               //صباح الخير text
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 12.0,bottom: 20),
                 child: Row(
                   children:const [
                      Text('  صباح الخير. ',
@@ -51,6 +50,19 @@ class _HomeState extends State<Home> {
                      Text('احمد ',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 24)),
+                  ],
+                ),
+              ),
+
+              //جدول اليوم, الأحد text
+              Container(
+                padding: const EdgeInsets.only(top: 20.0,right: 15,bottom: 10),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:const [
+                    Text('جدول اليوم, الأحد',
+                        style: TextStyle(fontFamily: 'Tajawal', fontWeight: FontWeight.bold, fontSize: 20)),
+
                   ],
                 ),
               ),
@@ -66,35 +78,28 @@ class _HomeState extends State<Home> {
                  ),
 
 
-              //text تبليغات
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'تبليغات اليوم ',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          fontFamily: 'Tajawal'),
-                    ),
-                    Container(
-                      width: 80,
-                      child: IconButton(
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: ((context) => Notifications_page()),
-                            ),
-                          );
-                        },
-                        icon: const Text('عرض الكل'),
-                      ),
-                    )
-                  ],
-                ),
+              //text عرض الكل
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(''),
+                        Container(
+                          width: 80,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: ((context) => Notifications_page()),
+                                ),
+                              );
+                            },
+                            child: const Text('عرض الكل',
+                                style: TextStyle(color:Colors.grey )),
+                          ),
+
               ),
+                      ],
+                    ),
 
               Flexible(
                 child: ListView.builder(
@@ -111,7 +116,7 @@ class _HomeState extends State<Home> {
 
                                    border: Border(
                                     top: BorderSide( //                    <--- top side
-                                      color: Colors.black,
+                                      color: Colors.grey,
                                     //  width: 3.0,
                                     ),
                                   ),
@@ -159,31 +164,9 @@ class _HomeState extends State<Home> {
                                                  )),
                                                ],
                                              ),
-                                            // Text(
-                                            //   'abdula kareem',
-                                            //   style: TextStyle(
-                                            //       color: Colors.black45,
-                                            //       fontSize: 13),
-                                            // )
                                           ],
                                         ),
 
-                                        //for time
-                                        // Row(
-                                        //   children: const [
-                                        //     Text(
-                                        //       '03:00pm',
-                                        //       style: TextStyle(
-                                        //           color: Colors.black45,
-                                        //           fontSize: 13),
-                                        //     ),
-                                        //     Icon(
-                                        //       Icons.timer_sharp,
-                                        //       color: Colors.black45,
-                                        //       size: 20,
-                                        //     )
-                                        //   ],
-                                        // )
                                       ],
                                     )
                                   ],

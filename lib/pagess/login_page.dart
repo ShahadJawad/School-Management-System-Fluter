@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grad_projct/pagess/mainPage.dart';
 import 'package:grad_projct/widgets/orginalButton.dart';
 
-import 'Home_page.dart';
+import 'navBarPages/Home_page.dart';
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
 
@@ -26,7 +27,7 @@ class _loginState extends State<login> {
                   TextButton(
                       onPressed: (){
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context)=>const Home()));
+                            MaterialPageRoute(builder: (context)=>const mainPage()));
                       },
                       child:const Text('X',
                         style: TextStyle(color: Colors.grey,fontSize: 19),)),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grad_projct/constant.dart';
-import 'package:grad_projct/pagess/classas_page.dart';
+import 'package:grad_projct/pagess/navBarPages/classas_page.dart';
 import 'package:grad_projct/widgets/myListTile.dart';
 
 class HomeDrawer extends StatelessWidget {

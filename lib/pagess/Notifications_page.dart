@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grad_projct/lists/colorList.dart';
 
 class Notifications_page extends StatefulWidget {
   const Notifications_page({super.key});
@@ -62,8 +61,9 @@ class _Notifications_pageState extends State<Notifications_page> {
                         padding: const EdgeInsets.only(top: 6, right: 8, left: 6),
                         height: 80,
                         margin: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
+                        decoration:const BoxDecoration(
+                          border: Border(top: BorderSide(width: 0.5,color: Colors.grey)),
+
                            // color: colorList[index].myColors
                         ),
                         child: Column(
