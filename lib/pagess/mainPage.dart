@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grad_projct/constant.dart';
 import 'package:grad_projct/pagess/navBarPages/classas_page.dart';
+import 'package:grad_projct/pagess/navBarPages/schedule_page.dart';
+import 'package:grad_projct/pagess/navBarPages/setting_page.dart';
 
 import 'navBarPages/Home_page.dart';
 
@@ -23,10 +25,10 @@ class _pagesState extends State<mainPage> {
   }
 
   List pages= [
-     Home(),
-    classas_page(),
-    // searchPage(),
-    // profilePage(),
+    const Home(),
+    const classas_page(),
+    const schedule_Page(),
+    const settingPage()
   ];
 
 
@@ -101,9 +103,9 @@ class _pagesState extends State<mainPage> {
   }
 
   List<IconData> listOfIcons = [
-    Icons.apps_outlined,
-    Icons.save,
-    Icons.search_outlined,
     Icons.home,
+    Icons.save,
+    Icons.schedule,
+    Icons.settings,
   ];
 }
