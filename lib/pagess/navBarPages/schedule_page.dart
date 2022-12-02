@@ -31,102 +31,34 @@ class schedule_Page extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+
               // جدول الدروس اليومية
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(border: Border.all()),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: ((context) => Daily_lessons()),
-                          ),
-                        );
-                      },
-                      icon: Icon(
-                        Icons.square_outlined,
-                        color: KColor,
-                        size: 35,
-                      ),
-                    ),
-                    const Text(
-                      'جدول الدروس اليومية',
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontFamily: 'Vazirmatn',
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              InkWell(
+                onTap: (){
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: ((context) =>Daily_lessons()),),
+                  );},
+                  child:const cardschedule(mytext: 'جدول الدروس اليومية')),
+
               // جدول الامتحانات الشهرية
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(border: Border.all()),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: ((context) => Monthly_exams()),
-                          ),
-                        );
-                      },
-                      icon: Icon(
-                        Icons.square_outlined,
-                        color: KColor,
-                        size: 35,
-                      ),
-                    ),
-                    const Text(
-                      'جدول الأمتحانات الشهرية',
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontFamily: 'Vazirmatn',
-                      ),
-                    )
-                  ],
-                ),
+              InkWell(
+                onTap: (){
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: ((context) => Monthly_exams()),),
+                  );},
+                child: const cardschedule(mytext: 'جدول الامتحانات الشهرية')
               ),
+
               // جدول الأمتحانات النهائية
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(border: Border.all()),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: ((context) => Final_exams()),
-                          ),
-                        );
-                      },
-                      icon: Icon(
-                        Icons.square_outlined,
-                        color: KColor,
-                        size: 35,
-                      ),
-                    ),
-                    const Text(
-                      'جدول الأمتحانات النهائية',
-                      style: TextStyle(
-                        fontSize: 23,
-                        fontFamily: 'Vazirmatn',
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: ((context) => Final_exams()),),
+                    );},
+                  child: cardschedule(mytext: 'جدول الأمتحانات النهائية'))
             ],
           )
         ],
@@ -137,48 +69,48 @@ class schedule_Page extends StatelessWidget {
 
 
 
-// class cardschedule extends StatelessWidget {
-//   const cardschedule({Key? key, required this.mytext}) : super(key: key);
+class cardschedule extends StatelessWidget {
+  const cardschedule({Key? key, required this.mytext}) : super(key: key);
 
-//   final String mytext;
+  final String mytext;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-//       height: 80,
-//       width: double.infinity,
-//       decoration: BoxDecoration(border: Border.all()),
-//       child: Row(
-//         children: [
-//           // Icon(
-//           //   Icons.square_outlined,
-//           //   size: 55,
-//           //   color: KColor,
-//           // ),
-//           IconButton(
-//             onPressed: () {
-//               Navigator.of(context).push(
-//                 MaterialPageRoute(
-//                   builder: ((context) => Daily_lessons()),
-//                 ),
-//               );
-//             },
-//             icon: Icon(
-//               Icons.square_outlined,
-//               color: KColor,
-//               size: 35,
-//             ),
-//           ),
-//           Text(
-//             mytext,
-//             style: const TextStyle(
-//               fontSize: 23,
-//               fontFamily: 'Vazirmatn',
-//             ),
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+      height: 80,
+      width: double.infinity,
+      decoration: BoxDecoration(border: Border.all()),
+      child: Row(
+        children: [
+          // Icon(
+          //   Icons.square_outlined,
+          //   size: 55,
+          //   color: KColor,
+          // ),
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: ((context) => Daily_lessons()),
+                ),
+              );
+            },
+            icon: Icon(
+              Icons.square_outlined,
+              color: KColor,
+              size: 35,
+            ),
+          ),
+          Text(
+            mytext,
+            style: const TextStyle(
+              fontSize: 23,
+              fontFamily: 'Vazirmatn',
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
