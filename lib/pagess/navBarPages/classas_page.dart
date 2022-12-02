@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grad_projct/classDetails_page.dart';
 
 import '../../constant.dart';
 class classas_page extends StatelessWidget {
@@ -102,66 +103,75 @@ class cardClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 130,width: 170,
-        decoration: BoxDecoration(
-          border: Border.all(),
-          // borderRadius:BorderRadius.circular(15),
-          //color: colorList[index].myColors,
+    return InkWell(
+      onTap: (){
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: ((context) =>classDetails_page()),
+          ),
+        );
+      },
+      child: Container(
+          height: 130,width: 170,
+          decoration: BoxDecoration(
+            border: Border.all(),
+            // borderRadius:BorderRadius.circular(15),
+            //color: colorList[index].myColors,
 
-        ),
-        child:   Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  Container(
-                      padding:const EdgeInsets.symmetric(horizontal: 10),
-                      child:const Text('الرياضيات',
-                        style: TextStyle(fontSize: 18,fontFamily: 'Vazirmatn',fontWeight: FontWeight.bold), )),
-                  const Text('  الصف الاول متوسط ',
-                      style: TextStyle(fontSize: 14,fontFamily: 'Vazirmatn',fontWeight: FontWeight.w500)
-                  ),
-                ],
-              ),
-
-
-              //doctor information
-              Container(
-                margin:const EdgeInsets.symmetric(vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children:  [
-                    Row(
-                      children:const [
-                        CircleAvatar(
-                          backgroundImage: AssetImage(
-                              'assets/images/person2.jpg'),
-                          radius: 15,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'abdula kareem',
-                          style: TextStyle(
-                              color: Colors.black,fontWeight: FontWeight.w500,
-                              fontSize: 13),
-                        ),
-                      ],
+          ),
+          child:   Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                        padding:const EdgeInsets.symmetric(horizontal: 10),
+                        child:const Text('الرياضيات',
+                          style: TextStyle(fontSize: 18,fontFamily: 'Vazirmatn',fontWeight: FontWeight.bold), )),
+                    const Text('  الصف الاول متوسط ',
+                        style: TextStyle(fontSize: 14,fontFamily: 'Vazirmatn',fontWeight: FontWeight.w500)
                     ),
-
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children:const [
-                        Icon(Icons.mode_edit_outline_rounded, size: 16,),
-                        Icon(Icons.delete_outline_outlined,size: 16,color: Colors.red,)
-                      ],
-                    )
-
                   ],
                 ),
-              ),
-            ])
+
+
+                //doctor information
+                Container(
+                  margin:const EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children:  [
+                      Row(
+                        children:const [
+                          CircleAvatar(
+                            backgroundImage: AssetImage(
+                                'assets/images/person2.jpg'),
+                            radius: 15,
+                          ),
+                          SizedBox(width: 5),
+                          Text(
+                            'abdula kareem',
+                            style: TextStyle(
+                                color: Colors.black,fontWeight: FontWeight.w500,
+                                fontSize: 13),
+                          ),
+                        ],
+                      ),
+
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children:const [
+                          Icon(Icons.mode_edit_outline_rounded, size: 16,),
+                          Icon(Icons.delete_outline_outlined,size: 16,color: Colors.red,)
+                        ],
+                      )
+
+                    ],
+                  ),
+                ),
+              ])
+      ),
     );
   }
 }
