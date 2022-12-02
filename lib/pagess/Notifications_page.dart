@@ -16,12 +16,15 @@ class _Notifications_pageState extends State<Notifications_page> {
         backgroundColor: Colors.white10,
         elevation: 0,
         actions: [
-          IconButton(onPressed: (){
-            Navigator.pop(context);
-          },
-            icon: Icon(Icons.arrow_forward,color: Colors.black,)),
+          IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_forward,
+                color: Colors.black,
+              )),
         ],
-
       ),
       body: Column(
         children: [
@@ -58,13 +61,15 @@ class _Notifications_pageState extends State<Notifications_page> {
                 itemBuilder: (context, index) => InkWell(
                       onTap: () {},
                       child: Container(
-                        padding: const EdgeInsets.only(top: 6, right: 8, left: 6),
+                        padding:
+                            const EdgeInsets.only(top: 6, right: 8, left: 6),
                         height: 80,
                         margin: const EdgeInsets.all(10),
-                        decoration:const BoxDecoration(
-                          border: Border(top: BorderSide(width: 0.5,color: Colors.grey)),
+                        decoration: const BoxDecoration(
+                          border: Border(
+                              top: BorderSide(width: 0.5, color: Colors.grey)),
 
-                           // color: colorList[index].myColors
+                          // color: colorList[index].myColors
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
