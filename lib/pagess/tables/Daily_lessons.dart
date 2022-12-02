@@ -4,13 +4,27 @@ import 'package:flutter/material.dart';
 class Daily_lessons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text(
-          "Daily_lessons",
-          style: TextStyle(
-            fontSize: 40,
-          ),
+        child: Column(
+          children: const [
+            SizedBox(
+              height: 350.0,
+            ),
+            Text(
+              "Daily Lessons",
+              style: TextStyle(
+                fontSize: 40,
+              ),
+            ),
+             Text(
+              "Soon",
+              style: TextStyle(
+                fontSize: 40,
+                color: Colors.red,
+              ),
+            ),
+          ],
         ),
       ),
     );

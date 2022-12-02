@@ -25,7 +25,7 @@ class schedule_Page extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Column(

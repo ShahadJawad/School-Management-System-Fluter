@@ -37,9 +37,11 @@ class _loginState extends State<login> {
                   padding:EdgeInsets.only(top: MediaQuery.of(context).size.height*0.1) ,
 
                 ),
-             const   Text('اهـلا بـك!',style: TextStyle(
-                    fontFamily: 'Alkalami',
-                    fontSize: 30
+             const   Text('اهـلاً بـك!',style: TextStyle(
+                    fontFamily: 'Cairo',
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+
                 )),
                 const Center(
                       child:
