@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grad_projct/constant.dart';
+import 'package:grad_projct/navbar_icons_icons.dart';
 import 'package:grad_projct/pagess/navBarPages/classas_page.dart';
 import 'package:grad_projct/pagess/navBarPages/schedule_page.dart';
 import 'package:grad_projct/pagess/navBarPages/setting_page.dart';
@@ -98,10 +99,16 @@ class _pagesState extends State<mainPage> {
         ));
   }
 
+  // List<IconData> listOfIcons = [
+  //   NavbarIcons.class_icon,
+  //   Icons.save,
+  //   Icons.schedule,
+  //   Icons.settings,
+  // ];
   List<IconData> listOfIcons = [
-    Icons.home,
-    Icons.save,
-    Icons.schedule,
-    Icons.settings,
+    NavbarIcons.home,
+    NavbarIcons.class_icon,
+    NavbarIcons.table,
+    NavbarIcons.settings,
   ];
 }
