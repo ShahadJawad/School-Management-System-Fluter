@@ -7,6 +7,8 @@ class classDetails_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
+
+
     );
   }
 }
