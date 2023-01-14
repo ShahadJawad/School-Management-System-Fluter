@@ -99,16 +99,16 @@ class _pagesState extends State<mainPage> {
         ));
   }
 
-  // List<IconData> listOfIcons = [
-  //   NavbarIcons.class_icon,
-  //   Icons.save,
-  //   Icons.schedule,
-  //   Icons.settings,
-  // ];
   List<IconData> listOfIcons = [
-    NavbarIcons.home,
-    NavbarIcons.class_icon,
-    NavbarIcons.table,
-    NavbarIcons.settings,
+    Icons.home,
+    Icons.save,
+    Icons.schedule,
+    Icons.settings,
   ];
+  // List<IconData> listOfIcons = [
+  //   NavbarIcons.home,
+  //   NavbarIcons.class_icon,
+  //   NavbarIcons.table,
+  //   NavbarIcons.settings,
+  // ];
 }
